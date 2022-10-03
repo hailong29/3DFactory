@@ -1,4 +1,4 @@
-#写轮眼辅助
+#写轮眼辅助, 向下填充50像素, 并将写轮眼以水印的形式置入
 .\bin\ffmpeg.exe -i demo.mp4 -vf "movie=mark.png [in1],[in]pad=iw:ih+50:iw:0[in0];[in0][in1] overlay=main_w/2-overlay_w/2:main_h-overlay_h-10[out]"  mark.mp4
 
 #将demo.mp4切去前面30毫秒, 输出到short.mp4 。短片抽30毫秒合适,3D效果强, 电视剧则适合20毫秒
